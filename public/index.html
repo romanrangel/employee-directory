@@ -9,13 +9,19 @@
       content="Web site created using create-react-app"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Employee Directory</title>
   </head>
   <body>
-    <div class=header>
-      <h1>Employee Directory</h1>
-      <p>Search for employees by entering their name. You may also click on "Name" to sort alphabetically.</p>
+
+    <div class="jumbotron text-center mb-0">
+      <h1 class="display-4">Employee Directory</h1>
+      <p class="lead">Search for employees by entering their name. You may also click on "Name" to sort alphabetically.</p>
+      <input type="text" placeholder="Search by name" name="search">
+      <button type="submit">Search</button>
     </div>
+
     <div id="root"></div>
+    
   </body>
 </html>
