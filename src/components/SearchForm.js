@@ -3,6 +3,7 @@ import React from "react";
 // ===COMPONENT GOES HERE===
 function SearchForm(props) {
     return (
+        
             <form className="text-center" onSubmit={
                 props.handleFormSubmit
             }>
