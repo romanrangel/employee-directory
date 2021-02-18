@@ -4,12 +4,17 @@ import API from "../utils/API"
 class Table extends Component {
 
     state = {
-        results: []
+        employeeData: [],
+        search: "",
     };
 
     componentDidMount() {
-        this.searchEmployee();
-        console.log("hi");
+        API.getEmployees()
+        .then((res) => 
+        this.setState({
+            employees: res.data.results,
+        })
+    ).catch((err) =>console.log(err));
     };
 
     searchEmployee = () => {
@@ -21,18 +26,18 @@ class Table extends Component {
             <table className="table text-center b-0">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
                         <td>{this.state.results}</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{this.state.results}</td>
+                        <td>{this.state.results}</td>
+                        <td>{this.state.results}</td>
                     </tr>
                 </tbody>
             </table>
